@@ -3372,6 +3372,7 @@ class FreelineEdgeView extends EdgeView {
     this.points.clear();
     this.points.add(new Point(x1, y1));
     this.points.add(new Point(x2, y2));
+    this.lineStyle = EdgeView.LS_OBLIQUE
     if (
       this.lineStyle === EdgeView.LS_RECTILINEAR ||
       this.lineStyle === EdgeView.LS_ROUNDRECT

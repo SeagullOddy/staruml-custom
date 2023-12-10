@@ -105,7 +105,7 @@
         { "value": "icon", "text": "Icon" },
         { "value": "icon-label", "text": "Icon with Label" }
       ],
-      "default": "icon"
+      "default": "label"
     },
     "uml.interface.suppressAttributes": {
       "text": "Suppress Attributes",
@@ -117,7 +117,7 @@
       "text": "Suppress Operations",
       "description": "Suppress operations of Interface.",
       "type": "check",
-      "default": true
+      "default": false
     },
     "uml.signal": {
       "text": "Signal",

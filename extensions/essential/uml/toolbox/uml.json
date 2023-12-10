@@ -70,6 +70,7 @@
         "command-arg": {
           "id": "UMLAssociation",
           "model-init": {
+            "end1": { "navigable": "navigable" },
             "end2": { "aggregation": "shared" }
           }
         }
@@ -82,6 +83,7 @@
         "command-arg": {
           "id": "UMLAssociation",
           "model-init": {
+            "end1": { "navigable": "navigable" },
             "end2": { "aggregation": "composite" }
           }
         }

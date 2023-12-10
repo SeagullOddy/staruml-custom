@@ -12325,6 +12325,7 @@ class UMLNoteLinkView extends EdgeView {
   constructor () {
     super()
     this.lineMode = EdgeView.LM_DOT
+    this.lineStyle = EdgeView.LS_OBLIQUE
   }
 }
 
