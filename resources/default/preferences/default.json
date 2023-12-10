@@ -154,7 +154,7 @@
     },
     "checkUpdate.checkUpdateOnStart": {
       "text": "Check Updates on Start",
-      "description": "Check updates on application start.",
+      "description": "Its logic has been modified, it will never check updates on start either on or off.",
       "type": "check",
       "default": true
     }

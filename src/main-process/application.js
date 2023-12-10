@@ -261,9 +261,7 @@ class Application extends EventEmitter {
 
     if (!packageJSON.config.setappBuild) {
       ipcMain.on('check-update', (event) => {
-        if (!global.application.cliMode) {
-          autoUpdater.checkForUpdatesAndNotify()
-        }
+        // do nothing
       })
     }
 
