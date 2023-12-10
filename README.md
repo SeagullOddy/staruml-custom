@@ -1,10 +1,12 @@
 # StarUML 定制版
 
+[EN README](README_EN.md)
+
 ## 描述
 
 让 [**StarUML**](https://staruml.io/) 更符合俺们的食用习惯 (\*/ω＼\*) ~
 
-包含中文、英文两个版本。
+部分版本提供中文、英文两种语言的支持，详见 [releases](https://github.com/SeagullOddy/staruml-custom/releases)。
 
 ## 首次使用
 

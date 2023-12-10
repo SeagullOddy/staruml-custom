@@ -4,7 +4,7 @@
 
 Make [**StarUML**](https://staruml.io/) more in line with "our" usage habits (\*/ω＼\*) ~
 
-It contains two versions: Chinese and English.
+Some versions provide support in both Chinese and English. For more information, please see [releases](https://github.com/SeagullOddy/staruml-custom/releases).
 
 ## First Use
 
