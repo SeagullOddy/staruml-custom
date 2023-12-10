@@ -1,8 +1,10 @@
-# StarUML Chinese Custom Edition
+# StarUML Custom Edition
 
 ## Description
 
 Make [**StarUML**](https://staruml.io/) more in line with "our" usage habits (\*/ω＼\*) ~
+
+It contains two versions: Chinese and English.
 
 ## First Use
 
