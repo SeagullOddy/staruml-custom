@@ -1129,10 +1129,8 @@ function handleAbout() {
 }
 
 function handleCheckForUpdates() {
-  if (app.updateManager.state === "no-update") {
-    ipcRenderer.send("command", "application:check-for-updates");
-  }
-  CheckUpdatesDialog.showDialog();
+  app.dialogs.showInfoDialog("Please view details of how to update on popup website.");
+  shell.openExternal(app.config.update_help_url);
 }
 
 function handleEnterLicenseKey() {
@@ -1144,23 +1142,7 @@ function handleEnterLicenseKey() {
 }
 
 function handleDeleteLicenseKey() {
-  if (app.licenseManager.getStatus() === true) {
-    var buttonId = app.dialogs.showConfirmDialog(
-      "Do you want to delete current license key?",
-    );
-    if (buttonId === "ok") {
-      var path = app.licenseManager.findLicense();
-      fs.unlinkSync(path);
-      app.licenseManager.checkLicenseValidity();
-    }
-    app.dialogs;
-  } else {
-    app.dialogs.showInfoDialog("You don't have a valid license to delete.");
-    var path2 = app.licenseManager.findLicense();
-    if (path2) {
-      fs.unlinkSync(path2);
-    }
-  }
+  app.dialogs.showInfoDialog("You don't need delete your license.");
 }
 
 function handleDocumentation() {

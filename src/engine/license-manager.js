@@ -34,8 +34,15 @@ const PRO_DIAGRAM_TYPES = [
   "GCPDiagram",
 ];
 
-var status = false;
-var licenseInfo = null;
+/**
+ * Default registration status & license info
+ */
+var status = true;
+var licenseInfo = {
+  licenseType: "PRO",
+  name: "Unlimited User",
+  quantity: 1,
+};
 
 /**
  * Set Registration Status
@@ -94,68 +101,13 @@ class LicenseManager extends EventEmitter {
   }
 
   /**
-   * Check license validity
+   * License is always valid
    *
    * @return {Promise}
    */
   validate() {
     return new Promise((resolve, reject) => {
-      try {
-        // Local check
-        var file = this.findLicense();
-        if (!file) {
-          reject("License key not found");
-        } else {
-          var data = fs.readFileSync(file, "utf8");
-          licenseInfo = JSON.parse(data);
-          if (licenseInfo.product !== packageJSON.config.product_id) {
-            app.toast.error(
-              `License key is for old version (${licenseInfo.product})`,
-            );
-            reject(`License key is not for ${packageJSON.config.product_id}`);
-          } else {
-            var base =
-              SK +
-              licenseInfo.name +
-              SK +
-              licenseInfo.product +
-              "-" +
-              licenseInfo.licenseType +
-              SK +
-              licenseInfo.quantity +
-              SK +
-              licenseInfo.timestamp +
-              SK;
-            var _key = crypto
-              .createHash("sha1")
-              .update(base)
-              .digest("hex")
-              .toUpperCase();
-            if (_key !== licenseInfo.licenseKey) {
-              reject("Invalid license key");
-            } else {
-              // Server check
-              $.post(app.config.validation_url, {
-                licenseKey: licenseInfo.licenseKey,
-              })
-                .done((data) => {
-                  resolve(data);
-                })
-                .fail((err) => {
-                  if (err && err.status === 499) {
-                    /* License key not exists */
-                    reject(err);
-                  } else {
-                    // If server is not available, assume that license key is valid
-                    resolve(licenseInfo);
-                  }
-                });
-            }
-          }
-        }
-      } catch (err) {
-        reject(err);
-      }
+      resolve(licenseInfo)
     });
   }
 
@@ -176,34 +128,13 @@ class LicenseManager extends EventEmitter {
   }
 
   /**
-   * Check the license key in server and store it as license.key file in local
+   * No registration required
    *
    * @param {string} licenseKey
    */
   register(licenseKey) {
     return new Promise((resolve, reject) => {
-      $.post(app.config.validation_url, { licenseKey: licenseKey })
-        .done((data) => {
-          if (data.product === packageJSON.config.product_id) {
-            var file = path.join(app.getUserPath(), "/license.key");
-            fs.writeFileSync(file, JSON.stringify(data, 2));
-            licenseInfo = data;
-            setStatus(this, true);
-            resolve(data);
-          } else {
-            setStatus(this, false);
-            reject("unmatched"); /* License is for old version */
-          }
-        })
-        .fail((err) => {
-          setStatus(this, false);
-          if (err.status === 499) {
-            /* License key not exists */
-            reject("invalid");
-          } else {
-            reject();
-          }
-        });
+      // Do nothing
     });
   }
 
