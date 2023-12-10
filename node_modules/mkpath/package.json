@@ -1,0 +1,15 @@
+{
+  "name": "mkpath",
+  "version": "0.1.0",
+  "author": "Jonathan Rajavuori <jrajav@gmail.com>",
+  "description": "Make all directories in a path, like mkdir -p",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jrajav/mkpath"
+  },
+  "main": "./mkpath",
+  "devDependencies": {
+    "tap": "~0.3"
+  },
+  "license": "MIT"
+}
