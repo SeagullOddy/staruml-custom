@@ -51,3 +51,8 @@ Source Version: v6.0.1
     - class FreelineEdgeView.initialize()：`this.lineStyle = EdgeView.LS_OBLIQUE`
   - **extensions/essential/uml/elements.js**
     - class UMLNoteLinkView.constructor()：`this.lineStyle = EdgeView.LS_OBLIQUE`
+
+### v601.0.2
+
+- For Idrila~
+- Add [**LXGW WenKai**](https://github.com/lxgw/LxgwWenKai-Lite) font to **resources/fonts/LXGWWenKai** folder for program UI and provide support for Chinese translation later.

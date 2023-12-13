@@ -7926,6 +7926,21 @@ div.k-notification.k-notification-error {
   font-weight: 500;
   font-style: normal;
 }
+/* -------------------------------------------------------------------------- */
+/* LXGWWenKai Regular */
+@font-face {
+  font-family: 'LXGWWenKai';
+  src: url('../../../resources/fonts/LXGWWenKai/LXGWWenKaiLite-Regular.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+/* LXGWWenKai Bold */
+@font-face {
+  font-family: 'LXGWWenKai';
+  src: url('../../../resources/fonts/LXGWWenKai/LXGWWenKaiLite-Bold.ttf');
+  font-weight: bold;
+  font-style: normal;
+}
 /* Font Stacks */
 .icon-Project {
   color: #c75339;
@@ -9716,7 +9731,7 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font: 13px 'SourceSansPro', Helvetica, "Meiryo UI", "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+  font: 13px 'SourceSansPro', Helvetica, 'LXGWWenKai', "Meiryo UI", "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
   text-shadow: none;
   font-weight: 400;
   -webkit-font-smoothing: antialiased;
@@ -9750,7 +9765,7 @@ button,
 input,
 select,
 textarea {
-  font: 13px 'SourceSansPro', Helvetica, "Meiryo UI", "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+  font: 13px 'SourceSansPro', Helvetica, 'LXGWWenKai', "Meiryo UI", "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
   font-weight: 400;
   -webkit-font-smoothing: antialiased;
 }

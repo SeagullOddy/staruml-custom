@@ -53,3 +53,8 @@
     - class FreelineEdgeView.initialize()：`this.lineStyle = EdgeView.LS_OBLIQUE`
   - **extensions/essential/uml/elements.js**
     - class UMLNoteLinkView.constructor()：`this.lineStyle = EdgeView.LS_OBLIQUE`
+
+### v601.0.2
+
+- 献给伊德利拉~
+- 添加 [**LXGW WenKai**](https://github.com/lxgw/LxgwWenKai-Lite) 字体到 **resources/fonts/LXGWWenKai** 目录，作为程序的 UI 字体，为后续版本的汉化提供支持。
